@@ -20,7 +20,7 @@ tabu =[[0  for i in range(2)]  for j in range(int(tabu_size))]
 count = 0
 
 for j in range(int(counter)):
-    #1st initial sol, after 1st becomes each iteration best sol
+    #1st iteration is initial sol, after 1st iteration becomes each iteration best sol
     buf = p[T[0]]
     temp[0] = 0    
     for num in range(len(T)):
@@ -29,7 +29,7 @@ for j in range(int(counter)):
             break
         buf = p[T[num+1]] + buf
 
-    # print(temp[0],"best now") #each iteration's best value
+    #start to swap 2 jobs 
     for i in range(1,len(T)):
         T[i-1],T[i] = T[i],T[i-1]   #swap 2 number
         
